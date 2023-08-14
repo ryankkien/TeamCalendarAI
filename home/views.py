@@ -4,6 +4,7 @@ from .models import Shareable
 from django.shortcuts import render, get_object_or_404
 from .models import Shareable
 
+
 @api_view(['POST'])
 def create_shareable(request):
     shareable = Shareable.objects.create(title=request.data.get('title'))
